@@ -4,9 +4,23 @@ Notable changes to this repository are documented in this file.
 
 This project adheres to semantic versioning.
 
-## [0.1.0] - xxxx-xx-xx
+## [Unreleased] - xxxx-xx-xx
+
+### Changed
+
+### Added
+
+### Fixed
+
+### Chore
+
+- Roadmap of future features added to changelog
+
+## [0.1.0] - 2021-01-25
 
 Adds `no-parent-imports` and development tooling
+
+### Changed
 
 ### Added
 
@@ -14,7 +28,5 @@ Adds `no-parent-imports` and development tooling
 - Adds ESLint as a dev dependency
 - Adds Prettier as a dev dependency
 - Adds Mocha as a dev dependency
-
-### Changed
 
 ### Fixed
