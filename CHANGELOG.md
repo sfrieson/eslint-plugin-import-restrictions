@@ -10,6 +10,8 @@ This project adheres to semantic versioning.
 
 ### Added
 
+- `no-inter-module-imports`
+
 ### Fixed
 
 ### Chore
@@ -18,15 +20,15 @@ This project adheres to semantic versioning.
 
 ## [0.1.0] - 2021-01-25
 
-Adds `no-parent-imports` and development tooling
+Added `no-parent-imports` and development tooling
 
 ### Changed
 
 ### Added
 
-- Adds `no-parent-imports`
-- Adds ESLint as a dev dependency
-- Adds Prettier as a dev dependency
-- Adds Mocha as a dev dependency
+- `no-parent-imports`
+- ESLint as a dev dependency
+- Prettier as a dev dependency
+- Mocha as a dev dependency
 
 ### Fixed
