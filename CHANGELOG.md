@@ -17,6 +17,7 @@ This project adheres to semantic versioning.
 ### Chore
 
 - Roadmap of future features added to changelog
+- Adds tooling for pre-publish validation
 
 ## [0.1.0] - 2021-01-25
 
