@@ -1,0 +1,31 @@
+{
+  "name": "eslint-plugin-import-restrictions",
+  "version": "0.0.1",
+  "description": "An ESLint plugin to support restricting from which directories and files importing is allowed.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests/lib/rules/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sfrieson/eslint-plugin-import-restrictions.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin",
+    "imports",
+    "restrict",
+    "rules",
+    "scope"
+  ],
+  "author": "Steven Frieson <sfrieson@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sfrieson/eslint-plugin-import-restrictions/issues"
+  },
+  "homepage": "https://github.com/sfrieson/eslint-plugin-import-restrictions#readme",
+  "peerDependencies": {
+    "eslint": "^7.18.0"
+  }
+}
