@@ -4,7 +4,7 @@ Notable changes to this repository are documented in this file.
 
 This project adheres to semantic versioning.
 
-## [Unreleased] - xxxx-xx-xx
+## [0.2.0] - 2021-01-25
 
 ### Changed
 
