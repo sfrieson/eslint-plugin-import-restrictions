@@ -4,7 +4,7 @@
   "description": "An ESLint plugin to support restricting from which directories and files importing is allowed.",
   "main": "index.js",
   "scripts": {
-    "test": "node tests/lib/rules/*.js"
+    "test": "mocha tests/lib/rules/*.js"
   },
   "repository": {
     "type": "git",
@@ -27,5 +27,12 @@
   "homepage": "https://github.com/sfrieson/eslint-plugin-import-restrictions#readme",
   "peerDependencies": {
     "eslint": "^7.18.0"
+  },
+  "devDependencies": {
+    "eslint": "*",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "mocha": "^8.2.1",
+    "prettier": "^2.2.1"
   }
 }
