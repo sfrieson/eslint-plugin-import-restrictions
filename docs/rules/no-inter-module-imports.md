@@ -4,9 +4,7 @@ Some repositories define their modules or features within themselves which shoul
 
 ```javascript
 /* Options
-[{
-  modules: ['src/module/Foo', 'src/module/Bar']
-}]
+['src/module/Foo', 'src/module/Bar']
 */
 
 // From file src/module/Foo/index.js
@@ -39,7 +37,7 @@ The options accept modules as a relative string and as an object.
     "import-restrictions/no-inter-module-imports": [
       "src/components/Foo",
       "src/components/Bar",
-      { "moduleRoot": "src/components/Baz", "public": ["."] }
+      { "moduleRoot": "src/components/Baz" }
     ]
   }
   ...

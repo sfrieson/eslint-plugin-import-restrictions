@@ -4,7 +4,7 @@ Notable changes to this repository are documented in this file.
 
 This project adheres to semantic versioning.
 
-## [Unreleased] - xxxx-xx-xx
+## [0.2.1] - 20201-01-25
 
 ### Changed
 
@@ -12,6 +12,7 @@ This project adheres to semantic versioning.
 
 ### Fixed
 
+- fixes documentation in `no-inter-module-imports`
 - changed `prepublish` to `prepare` in `package.json`
 
 ### Chore
