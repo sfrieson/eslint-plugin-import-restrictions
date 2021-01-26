@@ -4,7 +4,23 @@ Notable changes to this repository are documented in this file.
 
 This project adheres to semantic versioning.
 
+## [0.3.0] - 20201-01-25
+
+Added the `no-import-allowed` rule.
+
+### Changed
+
+### Added
+
+- `no-import-allowd`
+
+### Fixed
+
+### Chore
+
 ## [0.2.1] - 20201-01-25
+
+Fixed documentation inaccuracies regarding options for `no-inter-module-imports`.
 
 ### Changed
 
