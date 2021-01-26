@@ -4,11 +4,15 @@ Notable changes to this repository are documented in this file.
 
 This project adheres to semantic versioning.
 
-## [Unreleased] - xxxx-xx-xx
+## [0.4.0] - 2020-01-26
+
+Allows the package to be used in projects.
 
 ### Changed
 
 ### Added
+
+- Added the main export for using the rules.
 
 ### Fixed
 
