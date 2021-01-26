@@ -27,7 +27,7 @@ This rule enforces privacy between related scopes.
 
 ### Options
 
-The options accept modules as a relative string and as an object.
+The options accept modules as an absolue import string and as an object.
 
 ```javascript
 // Options

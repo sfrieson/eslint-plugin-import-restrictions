@@ -4,6 +4,18 @@ Notable changes to this repository are documented in this file.
 
 This project adheres to semantic versioning.
 
+## [Unreleased] - xxxx-xx-xx
+
+### Changed
+
+### Added
+
+### Fixed
+
+- Fixed `no-import-allowed` documentation.
+
+### Chore
+
 ## [0.3.0] - 20201-01-25
 
 Added the `no-import-allowed` rule.

@@ -4,42 +4,30 @@ Some files/directories should not be imported from at all. This could because it
 
 ```javascript
 /* Options
-[{
-  modules: ['src/module/Foo', 'src/module/Bar']
-}]
+['src/legacy/Foo'],
 */
 
-// From file src/module/Foo/index.js
-
-// ✅
-import styles from './styles.css';
-import utils from 'src/modules/Foo/utils.js';
-// `common` is allowed because it is not in the `modules` array
-import styles from '../common/styles.css';
-import utils from 'src/modules/common/utils.js';
+// From file src/module/NewFoo/index.js
 
 // ❌
-import styles from '../Bar/styles.css';
-import utils from 'src/modules/Bar/utils.js';
+import Foo from 'src/legacy/Foo';
 ```
 
 ## Rule details
 
-This rule enforces privacy between related scopes.
+This rule disallows the importing of a module or file.
 
 ### Options
 
-The options accept modules as a relative string and as an object.
+The options accept an array of module to disallow.
 
 ```javascript
 // Options
 {
   ...
   "rules": {
-    "import-restrictions/no-inter-module-imports": [
-      "src/components/Foo",
-      "src/components/Bar",
-      { "moduleRoot": "src/components/Baz", "public": ["."] }
+    "import-restrictions/no-import-allowed": [
+      "src/legacy/Foo",
     ]
   }
   ...
@@ -47,54 +35,5 @@ The options accept modules as a relative string and as an object.
 
 // src/components/Foo/index.js
 
-✅ import styles from './styles.css';
-✅ import commonStyles from '../common/styles.css';
-✅ import Baz from 'src/components/Baz';
-
-❌ import Bar from 'src/components/Bar';
-❌ import BazStyles from '../Bar/styles.js';
-```
-
-The rule configuration also accepts multiple module config arrays, so you can have multiple separated configs.
-
-```javascript
-
-{
-  ...
-  "rules": {
-    "import-restrictions/no-inter-module-imports": [
-      ["src/components/Foo", "src/components/Bar"],
-      ["src/modules/A", "src/modules/B", "src/modules/C"]
-    ]
-  }
-  ...
-}
-
-// src/components/Foo/index.js
-✅ import styles from './styles.css';
-✅ import A from 'src/modules/A';
-
-❌ import Bar from '../Bar';
-
-
-// src/Modules/A/index.js
-✅ import utils from './utils.js';
-
-❌ import B from 'src/modules/B';
-```
-
-### Future options 🔮
-
-```javascript
-⚠️ // Not yet implemented
-{
-  ...
-  "rules": {
-    "import-restrictions/no-inter-module-imports": [
-      { pattern: 'src/components/*', public: ['.'] },
-      { pattern: 'src/modules/*', private: ['./*.css'] }
-    ]
-  }
-  ...
-}
+❌ import Bar from 'src/legacy/Foo';
 ```
