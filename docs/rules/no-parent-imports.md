@@ -4,11 +4,19 @@ If directory structures are organized from general to specific, an opinion can b
 
 ```javascript
 // ✅
-import foo from 'foo';
-import foo from './foo';
-import foo from './my-stuff/foo';
+import moduleFoo from 'foo';
+import localFoo from './foo';
+import myStuffFoo from './my-stuff/foo';
 
 // ❌
-import foo from '../foo';
-import foo from '../../their-stuff/foo';
+import cousinFoo from '../foo';
+import distantFoo from '../../their-stuff/foo';
 ```
+
+## Options
+
+This rule currently accepts no options.
+
+## Future
+
+Future improvements are planned to support supplying a list of files/directories to which this rule should apply.

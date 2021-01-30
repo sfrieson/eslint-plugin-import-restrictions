@@ -2,6 +2,38 @@
 
 An ESLint plugin to support restricting from which directories and files importing is allowed.
 
+## Installation
+
+To start using these rules, first install that plugin:
+
+```
+npm install --save-dev eslint-plugin-import-restrictions
+```
+
+Then to your [ESLint config](https://eslint.org/docs/user-guide/configuring) add the the plugin:
+
+```json
+{
+  ...
+  "plugins": ["import-restrictions"],
+  ...
+}
+```
+
+Finally, decide which rule(s) you'd like to use. Some of them require options to be effective to check the documentation for the particular rule you'd like to use. The ESLint rule setting always comes first, and then the rule options. Each rule is `"off"` (`0`) by default. Here is more details about [configuring rules](https://eslint.org/docs/user-guide/configuring#configuring-rules).
+
+```diff
+  {
+    ...
++   "rules": {
++     "import-restrictions/no-parent-imports": "error"
++   },
+    "plugins": ["import-restrictions"],
+    ...
+  }
+
+```
+
 ## Rules
 
 - `no-parent-imports` ([docs](docs/rules/no-parent-imports.md)) - Disallows importing any path that requires accessing a parent directory.

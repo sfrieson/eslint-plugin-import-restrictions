@@ -22,12 +22,13 @@ This rule disallows the importing of a module or file.
 The options accept an array of module to disallow.
 
 ```javascript
-// Options
+// ESLint config
 {
   ...
   "rules": {
     "import-restrictions/no-import-allowed": [
-      "src/legacy/Foo",
+      "error"
+      ["src/legacy/Foo"],
     ]
   }
   ...

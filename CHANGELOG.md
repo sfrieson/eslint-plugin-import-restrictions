@@ -4,6 +4,26 @@ Notable changes to this repository are documented in this file.
 
 This project adheres to semantic versioning.
 
+## [Unreleased] - xxxx-xx-xx
+
+Improves documentation
+
+### Changed
+
+### Added
+
+- Better documentation:
+  - install instructions
+  - clearer options
+  - roadmap features
+  - tested code snippets
+
+### Fixed
+
+- Fixed `no-import-allowed` documentation.
+
+### Chore
+
 ## [0.4.0] - 2020-01-26
 
 Allows the package to be used in projects.

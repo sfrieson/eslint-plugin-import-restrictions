@@ -4,17 +4,17 @@ Some repositories define their modules or features within themselves which shoul
 
 ```javascript
 /* Options
-['src/module/Foo', 'src/module/Bar']
+['src/modules/Foo', 'src/modules/Bar']
 */
 
-// From file src/module/Foo/index.js
+// From file src/modules/Foo/index.js
 
 // ✅
 import styles from './styles.css';
 import utils from 'src/modules/Foo/utils.js';
 // `common` is allowed because it is not in the `modules` array
-import styles from '../common/styles.css';
-import utils from 'src/modules/common/utils.js';
+import commonStyles from '../common/styles.css';
+import commonUtils from 'src/modules/common/utils.js';
 
 // ❌
 import styles from '../Bar/styles.css';
@@ -35,11 +35,14 @@ The options accept modules as an absolue import string and as an object.
   ...
   "rules": {
     "import-restrictions/no-inter-module-imports": [
-      "src/components/Foo",
-      "src/components/Bar",
-      { "moduleRoot": "src/components/Baz" }
+      "error",
+      [
+        "src/components/Foo",
+        "src/components/Bar",
+        { "moduleRoot": "src/components/Baz" }
+      ]
     ]
-  }
+  },
   ...
 }
 
@@ -50,7 +53,7 @@ The options accept modules as an absolue import string and as an object.
 ✅ import Baz from 'src/components/Baz';
 
 ❌ import Bar from 'src/components/Bar';
-❌ import BazStyles from '../Bar/styles.js';
+❌ import BazStyles from '../Bar/styles.css';
 ```
 
 The rule configuration also accepts multiple module config arrays, so you can have multiple separated configs.
@@ -61,10 +64,13 @@ The rule configuration also accepts multiple module config arrays, so you can ha
   ...
   "rules": {
     "import-restrictions/no-inter-module-imports": [
-      ["src/components/Foo", "src/components/Bar"],
-      ["src/modules/A", "src/modules/B", "src/modules/C"]
+      "error",
+      [
+        ["src/components/Foo", "src/components/Bar"],
+        ["src/modules/A", "src/modules/B", "src/modules/C"]
+      ]
     ]
-  }
+  },
   ...
 }
 
@@ -75,7 +81,7 @@ The rule configuration also accepts multiple module config arrays, so you can ha
 ❌ import Bar from '../Bar';
 
 
-// src/Modules/A/index.js
+// src/modules/A/index.js
 ✅ import utils from './utils.js';
 
 ❌ import B from 'src/modules/B';
@@ -89,10 +95,13 @@ The rule configuration also accepts multiple module config arrays, so you can ha
   ...
   "rules": {
     "import-restrictions/no-inter-module-imports": [
-      { pattern: 'src/components/*', public: ['.'] },
-      { pattern: 'src/modules/*', private: ['./*.css'] }
+      "error",
+      [
+        { pattern: 'src/components/*', public: ['.'] },
+        { pattern: 'src/modules/*', private: ['./*.css'] }
+      ]
     ]
-  }
+  },
   ...
 }
 ```

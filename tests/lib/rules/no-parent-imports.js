@@ -4,15 +4,24 @@ var RuleTester = require('eslint').RuleTester;
 var ruleTester = new RuleTester({
   parserOptions: { sourceType: 'module', ecmaVersion: 2015 },
 });
-ruleTester.run('no-parent-imports', rule, {
-  valid: ["import foo from './foo';", "import foo from 'foo';"],
+
+const intro = {
+  valid: `
+import moduleFoo from 'foo';
+import localFoo from './foo';
+import myStuffFoo from './my-stuff/foo';`,
+  invalid: `
+import cousinFoo from '../foo';
+import distantFoo from '../../their-stuff/foo';`,
+};
+ruleTester.run('no-parent-imports docs examples', rule, {
+  valid: [intro.valid],
   invalid: [
     {
-      code: "import foo from '../foo';",
+      code: intro.invalid,
       errors: [
-        {
-          messageId: 'no-parent-imports',
-        },
+        { messageId: 'no-parent-imports' },
+        { messageId: 'no-parent-imports' },
       ],
     },
   ],

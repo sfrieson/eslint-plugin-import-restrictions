@@ -4,7 +4,7 @@
   "description": "An ESLint plugin to support restricting from which directories and files importing is allowed.",
   "main": "./lib/api.js",
   "scripts": {
-    "test": "mocha tests/lib/rules/*.js",
+    "test": "mocha tests/lib/rules/*.js tests/lib/api.js tests/docs/rules/*",
     "lint": "eslint .",
     "format": "prettier --check .",
     "prepare": "npm test && npm run lint && npm run format"
